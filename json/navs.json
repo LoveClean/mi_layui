@@ -1,0 +1,74 @@
+{
+  "navs1": [
+    {
+      "title": "用户管理",
+      "icon": "&#xe770;",
+      "href": "page/userManage/userList.html",
+      "spread": false
+    },
+    {
+      "title": "商品品类管理",
+      "icon": "&#xe653;",
+      "href": "page/productCategory/productCategoryList.html",
+      "spread": false
+    },
+    {
+      "title": "商品管理",
+      "icon": "&#xe653;",
+      "href": "page/product/productList.html",
+      "spread": false
+    },
+    {
+      "title": "商品款式管理",
+      "icon": "&#xe653;",
+      "href": "page/productStyle/productStyleList.html",
+      "spread": false
+    },
+    {
+      "title": "商品评论管理",
+      "icon": "&#xe653;",
+      "href": "page/productComment/productCommentList.html",
+      "spread": false
+    },
+    {
+      "title": "系统设置",
+      "icon": "&#xe716;",
+      "href": "",
+      "spread": false,
+      "children": [
+        {
+          "title": "管理员管理",
+          "icon": "&#xe613;",
+          "href": "page/admin/adminList.html",
+          "spread": false
+        },
+        {
+          "title": "系统参数",
+          "icon": "&#xe716;",
+          "href": "page/system/parameterList.html",
+          "spread": false
+        }
+      ]
+    }
+  ],
+  "navs2": [
+    {
+      "title": "用户管理（预留）",
+      "icon": "&#xe770;",
+      "href": "",
+      "spread": false
+    },
+    {
+      "title": "订单管理（预留）",
+      "icon": "&#xe770;",
+      "href": "",
+      "spread": false
+    },
+    {
+      "title": "资讯管理（预留）",
+      "icon": "&#xe60a;",
+      "href": "",
+      "spread": false
+    }
+  ]
+}
