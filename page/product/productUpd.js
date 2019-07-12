@@ -105,7 +105,7 @@ layui.use(['form', 'layer', 'layedit', 'upload'], function () {
                 productId: data.field.id,
                 categoryId: data.field.productCategory,
                 productArticleContent: layedit.getContent(editIndex),
-                productCover: "暂时为空",
+                productCover: coverUrl,
                 productIntroduction: data.field.productIntroduction,
                 productName: data.field.productName,
                 productPromotion: data.field.productPromotion

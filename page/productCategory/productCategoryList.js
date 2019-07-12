@@ -30,7 +30,7 @@ layui.use(['form', 'layer', 'table'], function () {
             toolbar: '#toolbarDemo',
             defaultToolbar: [],
             cols: [[
-                {field: 'categoryId', title: 'ID', width: 90, align: 'center'},
+                {field: 'categoryId', title: 'ID', width: 70, align: 'center'},
                 {
                     field: 'categoryName', title: '标题', minWidth: 200, align: "left", templet: function (d) {
                         return '<a lay-event="edit" style="cursor:pointer;color: #01AAED">' + d.categoryName + '</a>';

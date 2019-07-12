@@ -75,7 +75,7 @@ layui.use(['form', 'layer', 'upload'], function () {
                 styleId: data.field.styleId,
                 productId: data.field.product,
                 styleColor: data.field.styleColor,
-                styleCover: "暂时为空",
+                styleCover: coverUrl,
                 stylePrice: data.field.stylePrice,
                 stylePromotionalPrice: data.field.stylePromotionalPrice,
                 styleVersion: data.field.styleVersion

@@ -30,7 +30,12 @@ layui.use(['form', 'layer', 'table'], function () {
             toolbar: '#toolbarDemo',
             defaultToolbar: [],
             cols: [[
-                {field: 'productId', title: 'ID', width: 90, align: 'center'},
+                {field: 'productId', title: 'ID', width: 70, align: 'center'},
+                {
+                    field: 'productCover', title: 'logo', width: 60, align: "left", templet: function (d) {
+                        return '<img src="' + d.productCover + '" height="30px"/>';
+                    }
+                },
                 {
                     field: 'productName', title: '商品名称', minWidth: 200, align: "left", templet: function (d) {
                         return '<a lay-event="edit" style="cursor:pointer;color: #01AAED">' + d.productName + '</a>';
@@ -137,7 +142,7 @@ layui.use(['form', 'layer', 'table'], function () {
                         content: "productUpd.html",
                         success: function (layero, index) {
                             const body = layui.layer.getChildFrame('body', index);
-                            // body.find("#demo1").attr("src", data.cover);  //封面图
+                            body.find("#demo1").attr("src", data.productCover);  //封面图
                             // console.log(data.cover);
                             body.find(".id").val(data.productId);
                             body.find(".productName").val(data.productName);
