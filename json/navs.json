@@ -3,32 +3,48 @@
     {
       "title": "用户管理",
       "icon": "&#xe770;",
-      "href": "page/userManage/userList.html",
-      "spread": false
-    },
-    {
-      "title": "商品品类管理",
-      "icon": "&#xe653;",
-      "href": "page/productCategory/productCategoryList.html",
-      "spread": false
+      "href": "",
+      "spread": false,
+      "children": [
+        {
+          "title": "用户管理",
+          "icon": "&#xe770;",
+          "href": "page/userManage/userList.html",
+          "spread": false
+        }
+      ]
     },
     {
       "title": "商品管理",
       "icon": "&#xe653;",
-      "href": "page/product/productList.html",
-      "spread": false
-    },
-    {
-      "title": "商品款式管理",
-      "icon": "&#xe653;",
-      "href": "page/productStyle/productStyleList.html",
-      "spread": false
-    },
-    {
-      "title": "商品评论管理",
-      "icon": "&#xe653;",
-      "href": "page/productComment/productCommentList.html",
-      "spread": false
+      "href": "",
+      "spread": false,
+      "children": [
+        {
+          "title": "商品品类管理",
+          "icon": "&#xe653;",
+          "href": "page/productCategory/productCategoryList.html",
+          "spread": false
+        },
+        {
+          "title": "商品管理",
+          "icon": "&#xe653;",
+          "href": "page/product/productList.html",
+          "spread": false
+        },
+        {
+          "title": "商品款式管理",
+          "icon": "&#xe653;",
+          "href": "page/productStyle/productStyleList.html",
+          "spread": false
+        },
+        {
+          "title": "商品评论管理",
+          "icon": "&#xe653;",
+          "href": "page/productComment/productCommentList.html",
+          "spread": false
+        }
+      ]
     },
     {
       "title": "系统设置",
