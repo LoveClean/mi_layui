@@ -72,7 +72,7 @@ layui.use(['form', 'layer', 'upload'], function () {
             data: JSON.stringify({
                 productId: data.field.productId,
                 styleColor: data.field.styleColor,
-                styleCover: "暂时为空",
+                styleCover: coverUrl,
                 stylePrice: data.field.stylePrice,
                 stylePromotionalPrice: data.field.stylePromotionalPrice,
                 styleVersion: data.field.styleVersion

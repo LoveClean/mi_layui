@@ -43,7 +43,7 @@ layui.use(['form', 'layer', 'table'], function () {
                 },
                 {field: 'categoryName', title: '类别', minWidth: 90, align: 'left'},
                 {
-                    field: 'productPromotion', title: '促销语', minWidth: 300, align: 'left', templet: function (d) {
+                    field: 'productPromotion', title: '促销语', minWidth: 200, align: 'left', templet: function (d) {
                         return d.productPromotion !== "" ? d.productPromotion : "<label style='color: #c2c2c2'>无</label>"
                     }
                 },

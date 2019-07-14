@@ -32,7 +32,12 @@ layui.use(['form', 'layer', 'table'], function () {
             cols: [[
                 {field: 'categoryId', title: 'ID', width: 70, align: 'center'},
                 {
-                    field: 'categoryName', title: '标题', minWidth: 200, align: "left", templet: function (d) {
+                    field: 'categoryCover', title: '广告图', width: 110, align: "left", templet: function (d) {
+                        return d.categoryCover ? '<img src="' + d.categoryCover + '" height="30px"/>' : '<label style="color: #9F9F9F">无</label>';
+                    }
+                },
+                {
+                    field: 'categoryName', title: '标题', minWidth: 70, align: "left", templet: function (d) {
                         return '<a lay-event="edit" style="cursor:pointer;color: #01AAED">' + d.categoryName + '</a>';
                     }
                 },
@@ -75,24 +80,11 @@ layui.use(['form', 'layer', 'table'], function () {
                     const index = layui.layer.open({
                         title: "新增商品品类",
                         type: 2,
-                        area: ["500px", "280px"],
+                        area: ["500px", "440px"],
                         content: "productCategoryAdd.html",
-                        shadeClose: true,
-                        success: function () {
-                            setTimeout(function () {
-                                layui.layer.tips('点击此处关闭', '.layui-layer-setwin .layui-layer-close', {
-                                    tips: 3
-                                });
-                            }, 100)
-                        }
+                        shadeClose: true
                     });
-                // layui.layer.full(index);
-                // window.sessionStorage.setItem("index", index);
-                // //改变窗口大小时，重置弹窗的宽高，防止超出可视区域（如F12调出debug的操作）
-                // $(window).on("resize", function () {
-                //     layui.layer.full(window.sessionStorage.getItem("index"));
-                // });
-                // break;
+                    break;
             }
         });
 
@@ -128,29 +120,18 @@ layui.use(['form', 'layer', 'table'], function () {
                     const index = layui.layer.open({
                         title: "查看/更新资讯",
                         type: 2,
+                        area: ["500px", "440px"],
                         content: "productCategoryUpd.html",
+                        shadeClose: true,
                         success: function (layero, index) {
                             const body = layui.layer.getChildFrame('body', index);
-                            body.find("#demo1").attr("src", data.cover);  //封面图
-                            console.log(data.cover);
-                            body.find(".id").val(data.categoryId);
-                            body.find(".articleTitle").val(data.title);  //文章标题
-                            body.find(".introduction").val(data.introduction);  //文章简介
-                            // body.find('.category').siblings("div.layui-form-select").find('dl').find('dd[lay-value=' + data.category + ']').click();  //文章分类
-                            body.find(".createDate").val(data.createDate);
+                            body.find("#demo1").attr("src", data.categoryCover);  //封面图
+                            // console.log(data.cover);
+                            body.find(".categoryId").val(data.categoryId);
+                            body.find(".categoryName").val(data.categoryName);
+                            body.find(".categorySort").val(data.categorySort);
                             form.render();
-                            setTimeout(function () {
-                                layui.layer.tips('点击此处关闭', '.layui-layer-setwin .layui-layer-close', {
-                                    tips: 3
-                                });
-                            }, 100);
                         }
-                    });
-                    layui.layer.full(index);
-                    window.sessionStorage.setItem("index", index);
-                    //改变窗口大小时，重置弹窗的宽高，防止超出可视区域（如F12调出debug的操作）
-                    $(window).on("resize", function () {
-                        layui.layer.full(window.sessionStorage.getItem("index"));
                     });
                     break;
                 case 'del'://删除

@@ -87,7 +87,7 @@ layui.use(['form', 'layer', 'layedit', 'upload'], function () {
             data: JSON.stringify({
                 categoryId: data.field.productCategory,
                 productArticleContent: data.field.productArticleContent,
-                productCover: "暂时为空",
+                productCover: coverUrl,
                 productIntroduction: data.field.productIntroduction,
                 productName: data.field.productName,
                 productPromotion: data.field.productPromotion
