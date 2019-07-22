@@ -36,6 +36,7 @@ layui.use(['form', 'layer', 'table'], function () {
                         return d.categoryCover ? '<img src="' + d.categoryCover + '" height="30px"/>' : '<label style="color: #9F9F9F">无</label>';
                     }
                 },
+                {field: 'categorySort', title: '序号', width: 70, align: 'center'},
                 {
                     field: 'categoryName', title: '标题', minWidth: 70, align: "left", templet: function (d) {
                         return '<a lay-event="edit" style="cursor:pointer;color: #01AAED">' + d.categoryName + '</a>';
